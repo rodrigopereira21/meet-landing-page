@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+:root {
+    --cyan-600: #4D96A9;
+    --cyan-300: #8FE3F9;
+    --purple-600: #855fb1;
+    --purple-300: #D9B8FF;
+    --slate-900: #28283D;
+    --slate-600: #87879D;
+    --slate-300: #D1F1DF;
+    --white: #FAFAFA;
+
+    --ff: "Red Hat Display", serif;
+    --fs-h-desktop: 4rem;
+    --fs-h-mobile: 2.5rem;
+    --fs-highlight: 16px;
+    --fs-paragraph: 16px;
+    --line-height-1: 1.1;
+    --line-height-2: 1.5;
+    --letter-spacing: 4px;
+}
+
+/* reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    min-width: 375px;
+    display: grid;
+    place-content: center;
+    margin: auto;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    font-family: var(--ff);
+    font-size: var(--fs-paragraph);
+    color: var(--slate-600);
+    line-height: var(--line-height-2);
+    background: var(--white);
+    font-weight: 600;
+}
+
+/*text */  
+h1, h2 {
+    color: var(--slate-900);
+    font-weight: 800;
+    line-height: var(--line-height-1);
+    margin-bottom: 25px;
+
+}
+
+h1 {
+    font-size: var(--fs-h-mobile);
+    margin-inline: 25px;
+
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.built {
+    color: var(--cyan-600);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+}
+
+
+/*buttons*/
+
+button {
+    border: none;
+    background: var(--purple-600);
+    font-size: 15px;
+    color: var(--white);
+    font-weight: 600;
+    padding: 19px 40.20px;
+    border-radius: 50px;
+    transition: background-color .5s ease;
+}
+
+button:hover {
+    background-color: #B18BDD;
+    cursor: pointer;
+}
+
+.cyan-button {
+    background: var(--cyan-600);
+}
+
+.cyan-button:hover {
+    background-color: #71C0D4;
+}
+
+.cyan-version {
+    color: var(--cyan-300);
+}
+
+.purple-version {
+    color: var(--purple-300);
+}
+
+/* layout */
+
+header {
+    padding-block: 46px;
+}
+
+header img {
+    margin: auto;
+}
+
+.image-hero-left, 
+.image-hero-right {
+    display: none;
+}
+
+.hero {
+    margin-top: 63px;
+    margin-bottom: 32px;
+}
+
+.text-content {
+    margin: 46px 34px 32px 34px;
+    text-align: center;
+    padding: 25px;
+}
+
+.button-container {
+    margin-top: 25px;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    gap: 1rem;
+}
+
+.image-hero-mobile img {
+    overflow: hidden;
+    min-width: 430px;
+}
+
+/* divider design */
+
+.divider {
+	padding-bottom: 4rem;
+    
+}
+
+.number-bar,
+.number {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.number-bar {
+	width: 0.1rem;
+	height: 80px;
+	background-color: rgba(135, 135, 135, 0.25);
+}
+
+.number {
+	width: 56px;
+	height: 56px;
+	border-radius: 6.25rem;
+	border: 0.1rem solid rgba(135, 135, 135, 0.25);
+	font-weight: 1000;
+	color: #87879d;
+	font-size: 1rem;
+    background: var(--white);
+   
+    
+}
+
+.number2 {
+    margin-bottom: -5.5rem;
+    position: relative;
+    z-index: 2;
+    
+  }
+
+/* gallery */
+
+.image-collage {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 311px;
+    margin: auto;
+    
+}
+
+.image-collage img {
+    border-radius: .5rem;
+
+}
+
+/* footer */
+
+footer {
+    background-color: #4d96a9;
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-image:  url("assets/mobile/image-footer.jpg");
+    background-repeat: no-repeat;
+    padding: 64px 32px;
+    text-align: center;
+  }
+
+  footer h2{
+    color: #fafafa;
+    margin-bottom: 1.4375rem;
+  }
+  
+  footer p {
+    color: #fafafa;
+    margin: 0 auto 2rem;
+    max-width: 35.8125rem;
+  }
+
+  
+
+  @media (min-width: 768px) {
+
+    main {
+        max-width: 768px;
+    }
+
+    .text-content {
+        padding: 75px 163px 0 163px;
+        margin-inline: 45px;
+    }
+
+    .hero {
+        margin-top: 63px;
+        margin-bottom: 63px;
+        
+    }
+
+    h1 {
+        font-size: 3.1rem;
+        font-weight: 900;
+    }
+
+    h2 {
+        font-size: 2.370rem;
+        font-weight: 900;
+    }
+
+    .image-hero-mobile img {
+        overflow: hidden;
+        min-width: 820px;
+    }
+
+    .text-content-2 {
+        padding: 0px 110px 0 110px;
+
+    }
+
+    .button-container {
+        margin-top: 25px;
+        display: flex;
+        place-content: center;
+        justify-items: center;
+        gap: 1rem;
+    }
+
+    .image-collage {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        max-width: 680px;
+        margin: auto;
+        
+    }
+
+    footer {
+        background-image: url(assets/tablet/image-footer.jpg)
+    }     
+    
+  }
+
+  @media (min-width: 1440px) {
+    .image-hero-left, 
+    .image-hero-right {
+    display: block;
+    width: 394px;
+    }
+
+    .image-hero-mobile {
+        display: none;
+    }
+
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        gap: 9rem;
+    }
+
+    .text-content {
+        padding: 0;
+        margin: 0;
+        width: 400px;
+        
+    }
+
+    .text-content-2 {
+        padding: 75px 50px 0 50px;
+        margin-inline: auto;
+        width: 520px;
+        margin-bottom: 70px;
+        
+    }
+
+    .text-content-2 p {
+        font-size: 14px;
+    }
+
+   
+    .image-collage {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        max-width: 1120px;
+        margin: auto;
+        
+    }
+    
+    footer {
+        background-image: url(assets/desktop/image-footer.jpg);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        place-content: center;
+        gap: 7.5rem;
+        text-align: start;
+        padding: 110px;
+        justify-content: center;
+        
+        
+    }    
+    
+    .footer-title {
+        width: 445px;
+    }
+
+    .footer-paragraph {
+        width: 320px;
+    }
+
+    .footer-button {
+        width: 253px;
+    }
+    
+  }
+
